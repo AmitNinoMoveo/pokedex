@@ -1,12 +1,12 @@
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces.ts";
-import { ALLPOKEMON_SET_STATE } from "./actionTypes";
+import { ActionTypeNames, ActionTypes } from "./actions";
 
 
 const initAllPokemon: PokemonItemInterface[] = [];
 
-const allPokemonReducer = (state = initAllPokemon, action) =>{
+const allPokemonReducer = (state = initAllPokemon, action: ActionTypes ) =>{
     switch(action.type){
-        case ALLPOKEMON_SET_STATE:
+        case ActionTypeNames.ALLPOKEMON_SET_STATE:
             const newState = action.payload
             return newState
         default:
