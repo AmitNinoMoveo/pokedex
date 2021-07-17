@@ -9,14 +9,13 @@ const PokemonListComponent = () => {
     
     return (
         <div>
-            <p>Pokemon List Works!</p>
             {
                 pokemonList.map((pokemon)=>{
                 return <PokemonItemComponent id={pokemon.id} name={pokemon.name} />
             })
             }
         </div>
-    )
+    );
 };
 
 export default PokemonListComponent;

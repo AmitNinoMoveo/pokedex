@@ -3,7 +3,7 @@ import React from 'react'
 const HeaderComponent = () => {
     return (
         <div>
-            <p>Header Component Works!</p>
+            <img src="utils/images/pokemon-logo-img.svg" alt="pokemon-logo-img" />
         </div>
     )
 }
