@@ -9,4 +9,4 @@ export type AllPokemonSetStateActionType = {
     payload: PokemonItemInterface[];
 };
 
-export type ActionTypes = AllPokemonSetStateActionType;
+export type AllPokemonActionTypes = AllPokemonSetStateActionType;

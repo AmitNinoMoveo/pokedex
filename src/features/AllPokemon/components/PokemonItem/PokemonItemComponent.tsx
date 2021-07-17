@@ -1,9 +1,14 @@
 import React from 'react'
+import { PokemonItemInterface } from '../../utils/AllPokemonFeatureInterfaces.ts';
 
-const PokemonItemComponent = () => {
+const PokemonItemComponent = (props: PokemonItemInterface) => {
+
+    const { id, name } = props;
+
     return (
         <div>
-            <p>Pokemon Item Component Works!</p>
+            <p>ID: {id}</p>
+            <p>Name: {name}</p>
         </div>
     )
 }
