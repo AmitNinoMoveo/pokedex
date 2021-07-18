@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../styles/PokemonItem.css';
 import { PokemonItemInterface } from '../utils/AllPokemonFeatureInterfaces.ts';
 
 type Props = {
@@ -10,10 +11,10 @@ const PokemonItemComponent: React.FC<Props> = ({pokemon}: Props) => {
     const { id, name, imageUrl } = pokemon;
 
     return (
-        <div>
-            <p>ID: {id}</p>
-            <p>Name: {name}</p>
-            <img src={imageUrl} alt={`${name}`} />
+        <div className="container-pokemon-item" >
+            <p id="id" >{id}</p>
+            <img id="pokemon" src={imageUrl} alt={`${name}`} />
+            <p id="name" >{name}</p>
         </div>
     )
 }

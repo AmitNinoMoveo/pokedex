@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import '../styles/PokemonList.css';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
 import { allPokemonFetchListAction } from "../state/action-creators";
@@ -29,7 +30,7 @@ const PokemonListComponent = () => {
   );
 
   return (
-    <div>
+    <div className="container" >
       <PokemonList />
     </div>
   );

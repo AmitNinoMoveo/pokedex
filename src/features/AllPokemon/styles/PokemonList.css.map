@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAA;ECDN,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EDAf,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,MAAM;CACpB",
+    "sources": [
+        "PokemonList.scss",
+        "../../../styles/global/Mixins.scss"
+    ],
+    "names": [],
+    "file": "PokemonList.css"
+}

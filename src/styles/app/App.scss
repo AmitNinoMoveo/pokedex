@@ -1,0 +1,7 @@
+@import '../global/Variables.scss';
+@import '../global/Mixins.scss';
+
+.App{
+    @include flexCenter();
+    flex-direction: column
+};

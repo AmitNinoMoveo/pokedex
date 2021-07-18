@@ -1,0 +1,41 @@
+.container-pokemon-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 238px;
+  width: 267px;
+}
+
+.container-pokemon-item p {
+  color: #373299;
+}
+
+.container-pokemon-item p#id {
+  text-align: start;
+  width: 80%;
+}
+
+.container-pokemon-item p#name {
+  font-size: larger;
+}
+
+.container-pokemon-item img {
+  width: 125px;
+  height: 125px;
+}
+/*# sourceMappingURL=PokemonItem.css.map */

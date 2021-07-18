@@ -1,0 +1,28 @@
+@import "../../../styles/global/Mixins.scss";
+@import "../../../styles/global/Variables.scss";
+
+.container-pokemon-item {
+    @include flexCenter();
+    flex-direction: column;
+    justify-content: space-between;
+    height: 238px;
+    width: 267px;
+
+    p{
+        color: $primary1;
+    }
+
+    p#id{
+        text-align: start;
+        width: 80%;
+    }
+
+    p#name{
+        font-size: larger;
+    }
+
+    img{
+        width: 125px;
+        height: 125px;
+    }
+}

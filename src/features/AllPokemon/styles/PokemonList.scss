@@ -1,0 +1,8 @@
+@import '../../../styles/global/Mixins.scss';
+
+.container{
+    @include flexCenter();
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1080px;
+}

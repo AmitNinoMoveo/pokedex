@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,IAAI,CAAA;EEFA,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EFEnB,cAAc,EAAE,MACpB;CAAC",
+    "sources": [
+        "App.scss",
+        "../global/Variables.scss",
+        "../global/Mixins.scss"
+    ],
+    "names": [],
+    "file": "App.css"
+}
