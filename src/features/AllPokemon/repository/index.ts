@@ -7,11 +7,12 @@ export async function getPokemonsListRepo(){
     const pokemonsList = data.results.map((pokemon:any)=>{
         let name = pokemon.name;
         let id = pokemon.url;
-
+        
         name = name.charAt(0).toUpperCase() + name.substring(1);
         id = +id.split('pokemon/')[1].split('/')[0];
-
-        return { id, name } as PokemonItemInterface;
+        
+        let imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+        return { id, name, imageUrl } as PokemonItemInterface;
     });
     return pokemonsList;
 };

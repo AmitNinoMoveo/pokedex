@@ -1,18 +1,19 @@
 import React from 'react'
 import { PokemonItemInterface } from '../utils/AllPokemonFeatureInterfaces.ts';
 
-interface Props {
+type Props = {
     pokemon: PokemonItemInterface
 }
 
 const PokemonItemComponent: React.FC<Props> = ({pokemon}: Props) => {
 
-    const { id, name } = pokemon;
+    const { id, name, imageUrl } = pokemon;
 
     return (
         <div>
             <p>ID: {id}</p>
             <p>Name: {name}</p>
+            <img src={imageUrl} alt={`${name}`} />
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
 import { allPokemonFetchListAction } from "../state/action-creators";
+import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces.ts";
 import PokemonItemComponent from "./PokemonItem";
 
 const PokemonListComponent = () => {
@@ -18,7 +19,7 @@ const PokemonListComponent = () => {
   const PokemonList = () => (
     <>
       {pokemonList.length ? (
-        pokemonList.map((pokemon: any) => {
+        pokemonList.map((pokemon: PokemonItemInterface) => {
           return <PokemonItemComponent key={pokemon.id} pokemon={pokemon} />;
         })
       ) : (
