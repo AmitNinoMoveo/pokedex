@@ -1,7 +1,7 @@
 import { AnyAction } from "@reduxjs/toolkit";
 import { Dispatch } from "react";
 import { ThunkAction } from "redux-thunk";
-import { getPokemonsListFromApi } from "../../../../repository";
+import { getPokemonsListFromApi } from "../../repository";
 import { RootState } from "../../../../state/store";
 import { PokemonItemInterface } from "../../utils/AllPokemonFeatureInterfaces.ts";
 import { ActionTypeNames, AllPokemonActionTypes } from "../actions-types";
