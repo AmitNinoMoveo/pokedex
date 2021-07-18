@@ -1,40 +1,32 @@
 import { PokemonItemInterface } from "../../utils/AllPokemonFeatureInterfaces.ts";
 
 export enum ActionTypeNames {
-    ALLPOKEMON_SET_STATE = 'ALLPOKEMON_SET_STATE',
-    ALLPOKEMON_FETCH_DATA = 'ALLPOKEMON_FETCH_DATA',
-    ALLPOKEMON_PAGENUMBER_SETSTATE = 'ALLPOKEMON_PAGENUMBER_SET_STATE',
-    ALLPOKEMON_PAGENUMBER_INC = 'ALLPOKEMON_PAGENUMBER_INC',
-    ALLPOKEMON_PAGENUMBER_DEC = 'ALLPOKEMON_PAGENUMBER_DEC',
+  ALLPOKEMON_SET_POKEMONS = "ALLPOKEMON_SET_POKEMONS",
+  ALLPOKEMON_SET_PAGENUMBER = "ALLPOKEMON_SET_PAGENUMBER",
+  ALLPOKEMON_PAGENUMBER_INC = "ALLPOKEMON_PAGENUMBER_INC",
+  ALLPOKEMON_PAGENUMBER_DEC = "ALLPOKEMON_PAGENUMBER_DEC",
 }
 
-export type AllPokemonSetStateActionType = {
-    type: ActionTypeNames.ALLPOKEMON_SET_STATE;
-    payload: PokemonItemInterface[];
+export type AllPokemonSetPokemons = {
+  type: ActionTypeNames.ALLPOKEMON_SET_POKEMONS;
+  pokemons: PokemonItemInterface[];
 };
 
-export type AllPokemonFetchDataActionType = {
-    type: ActionTypeNames.ALLPOKEMON_FETCH_DATA;
-    payload: PokemonItemInterface[];
+export type AllPokemonSetPageNumber = {
+  type: ActionTypeNames.ALLPOKEMON_SET_PAGENUMBER;
+  pageNumber: number;
 };
 
-export type AllPokemonPageNumberSetStateActionType = {
-    type: ActionTypeNames.ALLPOKEMON_PAGENUMBER_SETSTATE;
-    payload: number
-}
-
-export type AllPokemonPageNumberIncActionType = {
-    type: ActionTypeNames.ALLPOKEMON_PAGENUMBER_INC;
+export type AllPokemonPageNumberInc = {
+  type: ActionTypeNames.ALLPOKEMON_PAGENUMBER_INC;
 };
-export type AllPokemonPageNumberDecActionType = {
-    type: ActionTypeNames.ALLPOKEMON_PAGENUMBER_DEC;
+export type AllPokemonPageNumberDec = {
+  type: ActionTypeNames.ALLPOKEMON_PAGENUMBER_DEC;
 };
 
-export type AllPokemonActionTypes = 
-        AllPokemonSetStateActionType |
-        AllPokemonFetchDataActionType |
-        AllPokemonPageNumberSetStateActionType |
-        AllPokemonPageNumberIncActionType |
-        AllPokemonPageNumberDecActionType
-;
+export type AllPokemonActionTypes =
+  | AllPokemonSetPokemons
+  | AllPokemonSetPageNumber
+  | AllPokemonPageNumberInc
+  | AllPokemonPageNumberDec;
 // Visual End Of AllPokemonActionTypes Line!!

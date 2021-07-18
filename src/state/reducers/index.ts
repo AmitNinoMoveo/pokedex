@@ -1,9 +1,9 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import allPokemonFeatureReducers from '../../features/AllPokemon/state/reducers/index';
+import allPokemonReducer from '../../features/AllPokemon/state/reducers/AllPokemonStateReducer'
 
 
 const appReducers = combineReducers({
-    allPokemonFeatureReducers
+    allPokemonState: allPokemonReducer
 });
 
 export default appReducers;
