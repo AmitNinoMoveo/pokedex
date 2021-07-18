@@ -2,8 +2,8 @@ import api from "../../../api";
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces.ts";
 import { generatePokemonFetchUrl } from "../../../utils";
 
-export async function getPokemonsListFromApi(pageNumber: number){
-    const { data } = await api.get(generatePokemonFetchUrl(pageNumber));
+export async function getPokemonsListFromApi(){
+    const { data } = await api.get(generatePokemonFetchUrl());
     const pokemonsList = data.results.map((pokemon:any)=>{
         let name = pokemon.name;
         let id = pokemon.url;

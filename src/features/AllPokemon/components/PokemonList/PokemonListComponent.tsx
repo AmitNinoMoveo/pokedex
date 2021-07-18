@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAppSelector } from '../../../../state/reduxHooks';
 import { RootState } from '../../../../state/store';
+import { allPokemonFetchList } from '../../state/action-creators';
 import PokemonItemComponent from '../PokemonItem/PokemonItemComponent'
 
 const PokemonListComponent = () => {
 
-    const pokemonList = useAppSelector((state: RootState)=>state.allPokemonFeatureReducers.allPokemonState);
-    
+    const pokemonList = useAppSelector((state: RootState) => state.allPokemonFeatureReducers.allPokemonState);
+
+    useEffect(() => {
+        allPokemonFetchList();
+    })
+
     return (
         <div>
             {
-                pokemonList.map((pokemon)=>{
-                return <PokemonItemComponent id={pokemon.id} name={pokemon.name} />
-            })
+                pokemonList.length ?
+                    pokemonList.map((pokemon) => {
+                        return <PokemonItemComponent id={pokemon.id} name={pokemon.name} />
+                    })
+                    :
+                    <p>No Pokemon!</p>
             }
         </div>
     );

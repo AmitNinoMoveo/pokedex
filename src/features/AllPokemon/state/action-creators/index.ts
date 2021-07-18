@@ -16,8 +16,8 @@ export const allPokemonSetState = (newState: PokemonItemInterface[]) => {
 };
 
 export const allPokemonFetchList = (): ThunkAction<void, RootState, unknown, AnyAction> => {
-    return async dispatch  => {
-        const data = await getPokemonsListFromApi(1)
+    return async (dispatch: Dispatch<AllPokemonActionTypes>)  => {
+        const data = await getPokemonsListFromApi()
         dispatch({
             type: ActionTypeNames.ALLPOKEMON_SET_STATE,
             payload: data

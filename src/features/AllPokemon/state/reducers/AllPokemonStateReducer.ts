@@ -1,4 +1,3 @@
-import { getPokemonsListFromApi } from "../../repository";
 import { PokemonItemInterface } from "../../utils/AllPokemonFeatureInterfaces.ts";
 import { ActionTypeNames, AllPokemonActionTypes } from "../actions-types";
 

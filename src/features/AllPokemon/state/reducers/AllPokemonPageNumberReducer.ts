@@ -19,8 +19,10 @@ const AllPokemonPageNumberReducer = (state = initPageNumber, action: AllPokemonA
                 return state;
             }else{
                 const newState = state - 1
-                return state;
+                return newState;
             };
+        default:
+            return state;
     };
 };
 

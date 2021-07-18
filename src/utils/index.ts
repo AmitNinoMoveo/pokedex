@@ -1,16 +1,24 @@
-export function generatePokemonFetchUrl(pageNumber: number): string{
-    let url = 'pokemon?';
+import { store } from "../state/store";
+
+
+export function generatePokemonFetchUrl(): string{
+
+    const pageNumber = store.getState().allPokemonFeatureReducers.allPokemonPageNumber;
+    
+    const baseUrl = 'pokemon?';
+    const PageIncrementAmount = 20;
+    let outputUrl: string;
     let fetchPokemonAmountLimit: number;
     let fetchPokemonOffset: number;
     
     if (pageNumber <= 1 ) {
-        fetchPokemonAmountLimit = 21        
-        url = `${url}limit=${fetchPokemonAmountLimit}`;
+        fetchPokemonAmountLimit = 1 + PageIncrementAmount        
+        outputUrl = `${baseUrl}limit=${fetchPokemonAmountLimit}`;
     }else{
-        fetchPokemonAmountLimit = 1 + pageNumber*20;
-        fetchPokemonOffset = fetchPokemonAmountLimit - 20;
-        url = `${url}offset=${fetchPokemonOffset}&limit=${fetchPokemonAmountLimit}`;
+        fetchPokemonAmountLimit = 1 + pageNumber*PageIncrementAmount;
+        fetchPokemonOffset = fetchPokemonAmountLimit - PageIncrementAmount;
+        outputUrl = `${baseUrl}offset=${fetchPokemonOffset}&limit=${fetchPokemonAmountLimit}`;
     };
 
-    return url;
+    return outputUrl;
 };
