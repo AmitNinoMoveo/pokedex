@@ -5,8 +5,9 @@
     @include flexCenter();
     flex-direction: column;
     justify-content: space-between;
-    height: 238px;
-    width: 267px;
+    height: 220px;
+    width: 245px;
+    margin-bottom: 60px;
 
     p{
         color: $primary1;
@@ -22,7 +23,7 @@
     }
 
     img{
-        width: 125px;
-        height: 125px;
+        width: 175px;
+        height: 175px;
     }
 }

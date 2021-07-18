@@ -1,5 +1,5 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import allPokemonReducer from '../../features/AllPokemon/state/reducers/AllPokemonStateReducer'
+import allPokemonReducer from '../../features/AllPokemon/state/AllPokemonStateReducer'
 
 
 const appReducers = combineReducers({

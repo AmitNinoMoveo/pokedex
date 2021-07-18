@@ -17,8 +17,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 238px;
-  width: 267px;
+  height: 220px;
+  width: 245px;
+  margin-bottom: 60px;
 }
 
 .container-pokemon-item p {
@@ -35,7 +36,7 @@
 }
 
 .container-pokemon-item img {
-  width: 125px;
-  height: 125px;
+  width: 175px;
+  height: 175px;
 }
 /*# sourceMappingURL=PokemonItem.css.map */

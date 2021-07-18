@@ -1,4 +1,4 @@
-import { PokemonItemInterface } from "../../utils/AllPokemonFeatureInterfaces.ts";
+import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
 
 export enum ActionTypeNames {
   ALLPOKEMON_SET_POKEMONS = "ALLPOKEMON_SET_POKEMONS",

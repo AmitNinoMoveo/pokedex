@@ -1,6 +1,6 @@
 import api from "../../../api";
-import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces.ts";
-import { generatePokemonFetchUrl } from "../../../utils";
+import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
+import { generatePokemonFetchUrl } from "../../../utils/utils";
 
 export async function getPokemonsListRepo(){
     const { data } = await api.get(generatePokemonFetchUrl());

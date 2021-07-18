@@ -1,6 +1,7 @@
 import React from 'react';
+import { generatePokemonIdString } from '../../../utils/utils';
 import '../styles/PokemonItem.css';
-import { PokemonItemInterface } from '../utils/AllPokemonFeatureInterfaces.ts';
+import { PokemonItemInterface } from '../utils/AllPokemonFeatureInterfaces';
 
 type Props = {
     pokemon: PokemonItemInterface
@@ -12,7 +13,7 @@ const PokemonItemComponent: React.FC<Props> = ({pokemon}: Props) => {
 
     return (
         <div className="container-pokemon-item" >
-            <p id="id" >{id}</p>
+            <p id="id" >{generatePokemonIdString(id)}</p>
             <img id="pokemon" src={imageUrl} alt={`${name}`} />
             <p id="name" >{name}</p>
         </div>

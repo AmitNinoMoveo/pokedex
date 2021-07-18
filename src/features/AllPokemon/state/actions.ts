@@ -1,7 +1,7 @@
-import { AppThunk } from "../../../../state/store";
-import { getPokemonsListRepo } from "../../repository";
-import { PokemonItemInterface } from "../../utils/AllPokemonFeatureInterfaces.ts";
-import { ActionTypeNames, AllPokemonSetPokemons } from "../actions-types";
+import { AppThunk } from "../../../state/store";
+import { getPokemonsListRepo } from "../repository/repository";
+import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
+import { ActionTypeNames, AllPokemonSetPokemons } from "./action-types";
 
 export const allPokemonSetState = (newState: PokemonItemInterface[]): AllPokemonSetPokemons => {
     return {

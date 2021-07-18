@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import '../styles/PokemonList.css';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
-import { allPokemonFetchListAction } from "../state/action-creators";
-import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces.ts";
+import { allPokemonFetchListAction } from "../state/actions";
+import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
 import PokemonItemComponent from "./PokemonItem";
 
 const PokemonListComponent = () => {

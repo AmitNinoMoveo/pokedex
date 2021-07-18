@@ -1,1 +1,1 @@
-export * as allPokemonActionCreators from '../state/action-creators';
+export * as allPokemonActionCreators from './actions';

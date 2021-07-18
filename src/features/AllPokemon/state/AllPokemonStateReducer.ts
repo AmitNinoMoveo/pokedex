@@ -1,5 +1,5 @@
-import { PokemonItemInterface } from "../../utils/AllPokemonFeatureInterfaces.ts";
-import { ActionTypeNames, AllPokemonActionTypes } from "../actions-types";
+import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
+import { ActionTypeNames, AllPokemonActionTypes } from "./action-types";
 
 export type allPokemonReducerType = {
     pokemonList: PokemonItemInterface[];
