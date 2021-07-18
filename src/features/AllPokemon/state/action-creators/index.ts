@@ -1,8 +1,6 @@
-import { AnyAction } from "@reduxjs/toolkit";
 import { Dispatch } from "react";
-import { ThunkAction } from "redux-thunk";
+import { store } from "../../../../state/store";
 import { getPokemonsListFromApi } from "../../repository";
-import { RootState } from "../../../../state/store";
 import { PokemonItemInterface } from "../../utils/AllPokemonFeatureInterfaces.ts";
 import { ActionTypeNames, AllPokemonActionTypes } from "../actions-types";
 
@@ -15,12 +13,10 @@ export const allPokemonSetState = (newState: PokemonItemInterface[]) => {
     };
 };
 
-export const allPokemonFetchList = (): ThunkAction<void, RootState, unknown, AnyAction> => {
-    return async (dispatch: Dispatch<AllPokemonActionTypes>)  => {
-        const data = await getPokemonsListFromApi()
-        dispatch({
-            type: ActionTypeNames.ALLPOKEMON_SET_STATE,
-            payload: data
-        });
-    };
+export const allPokemonFetchList = async (): Promise<void> => {
+    const data = await getPokemonsListFromApi()
+    store.dispatch({
+        type: ActionTypeNames.ALLPOKEMON_SET_STATE,
+        payload: [...data]
+    });
 };

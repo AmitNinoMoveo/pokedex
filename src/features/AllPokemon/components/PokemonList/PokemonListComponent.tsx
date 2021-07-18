@@ -10,14 +10,14 @@ const PokemonListComponent = () => {
 
     useEffect(() => {
         allPokemonFetchList();
-    })
+    },[]);
 
     return (
         <div>
             {
                 pokemonList.length ?
                     pokemonList.map((pokemon) => {
-                        return <PokemonItemComponent id={pokemon.id} name={pokemon.name} />
+                        return <PokemonItemComponent key={pokemon.id} id={pokemon.id} name={pokemon.name} />
                     })
                     :
                     <p>No Pokemon!</p>
