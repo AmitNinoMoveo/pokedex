@@ -6,7 +6,7 @@ import { allPokemonFetchListAction } from "../state/actions";
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
 import PokemonItemComponent from "./PokemonItem";
 
-const PokemonListComponent = () => {
+const AllPokemonComponent = () => {
   const pokemonList = useSelector(
     (state: RootState) => state.allPokemonState.pokemonList
   );
@@ -36,4 +36,4 @@ const PokemonListComponent = () => {
   );
 };
 
-export default PokemonListComponent;
+export default AllPokemonComponent;
