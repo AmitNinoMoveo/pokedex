@@ -1,10 +1,11 @@
 {
     "version": 3,
-    "mappings": "AAGA,AAAA,IAAI,CAAA;EEFA,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EFCf,cAAc,EAAE,MACpB;CAAC",
+    "mappings": "AAGA,AAAA,IAAI,CAAA;EEAA,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EFDf,cAAc,EAAE,MACpB;CAAC",
     "sources": [
         "App.scss",
         "../global/Variables.scss",
-        "../global/Mixins.scss"
+        "../global/Mixins.scss",
+        "../global/Variables.scss"
     ],
     "names": [],
     "file": "App.css"

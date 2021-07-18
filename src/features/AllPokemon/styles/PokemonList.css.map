@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,UAAU,CAAA;ECDN,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EDAf,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,MAAM;CACpB",
+    "mappings": "AAEA,AAAA,UAAU,CAAA;ECCN,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EDFf,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,MAAM;CACpB",
     "sources": [
         "PokemonList.scss",
-        "../../../styles/global/Mixins.scss"
+        "../../../styles/global/Mixins.scss",
+        "../../../styles/global/Variables.scss"
     ],
     "names": [],
     "file": "PokemonList.css"

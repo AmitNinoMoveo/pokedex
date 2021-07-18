@@ -12,14 +12,14 @@ function App() {
       <SearchComponent />
       <BrowserRouter>
         <Switch>
-          <Route path="/all">
+          <Route path="/">
             <AllPokemonComponent />
           </Route>
           {/* <Route path="/single/:id">
             <SinglePokemonComponent />
           </Route> */}
           <Route>
-            <Redirect to="/all" />
+            <Redirect from="*" to="/" />
           </Route>
         </Switch>
       </BrowserRouter>
