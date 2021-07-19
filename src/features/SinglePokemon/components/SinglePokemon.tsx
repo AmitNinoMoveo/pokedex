@@ -3,7 +3,7 @@ import '../styles/singlePokemon.css';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { RootState } from "../../../state/store";
-import { generatePokemonIdString, getPokemonTypeColor } from "../../../utils/utils";
+import { generatePokemonIdString, getPokemonTypeColor, toTitleCase, toTitleCaseSingle } from "../../../utils/utils";
 import { SinglePokemonFetchAction } from "../state/actions";
 
 type Params = {
@@ -25,10 +25,10 @@ const SinglePokemonComponent = () => {
       <p id="id">{generatePokemonIdString(pokemon.id)}</p>
       <div className="image-title-container">
         <div className="pokemon-image" />
-        <p className="title">{pokemon.name}</p>
+        <p className="title">{toTitleCaseSingle(pokemon.name)}</p>
         <div className="pokemon-types-container">
           {pokemon.types.map((type: string) => (
-            <p className='pokemon-type' style={{backgroundColor:`${getPokemonTypeColor(type)}`}}>{type}</p>
+            <p className='pokemon-type' style={{backgroundColor:`${getPokemonTypeColor(type)}`}}>{toTitleCaseSingle(type)}</p>
           ))}
         </div>
       </div>
@@ -39,7 +39,7 @@ const SinglePokemonComponent = () => {
         <p className="title">Stats</p>
         <div className="stats-container">
           {pokemon.stats.map((stat) => (
-            <p>{`${stat.name}: ${stat.value}`}</p>
+            <p>{`${toTitleCase(stat.name)}: ${stat.value}`}</p>
           ))}
         </div>
       </div>
