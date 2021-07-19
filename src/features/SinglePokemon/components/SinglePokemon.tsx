@@ -31,6 +31,7 @@ const SinglePokemonComponent = () => {
           ))}
         </div>
       </div>
+      <hr />
       <div className="description-stats-container">
         <p className="title">Description</p>
         <p>{pokemon.description}</p>
