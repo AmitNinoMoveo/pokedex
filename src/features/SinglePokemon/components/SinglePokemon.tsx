@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
+import '../styles/singlePokemon.css';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { RootState } from "../../../state/store";
-import { generatePokemonIdString } from "../../../utils/utils";
+import { generatePokemonIdString, getPokemonTypeColor } from "../../../utils/utils";
 import { SinglePokemonFetchAction } from "../state/actions";
 
 type Params = {
@@ -21,20 +22,20 @@ const SinglePokemonComponent = () => {
 
   return (
     <div className="single-pokemon-container">
+      <p id="id">{generatePokemonIdString(pokemon.id)}</p>
       <div className="image-title-container">
-        <p id="id">{generatePokemonIdString(pokemon.id)}</p>
         <div className="pokemon-image" />
         <p className="title">{pokemon.name}</p>
         <div className="pokemon-types-container">
-          {pokemon.types.map((type) => (
-            <p className={`pokemon-type ${type}-type-color`}>{type}</p>
+          {pokemon.types.map((type: string) => (
+            <p className='pokemon-type' style={{backgroundColor:`${getPokemonTypeColor(type)}`}}>{type}</p>
           ))}
         </div>
       </div>
-      <hr />
+      <div className="divider" />
       <div className="description-stats-container">
         <p className="title">Description</p>
-        <p>{pokemon.description}</p>
+        <p className="description" >{pokemon.description}</p>
         <p className="title">Stats</p>
         <div className="stats-container">
           {pokemon.stats.map((stat) => (
