@@ -1,19 +1,19 @@
 import { AppThunk } from "../../../state/store";
 import { getPokemonsListRepo } from "../repository/repository";
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
-import { ActionTypeNames, AllPokemonSetPokemons } from "./action-types";
+import { ActionTypeNames, AllPokemonSetPokemon } from "./action-types";
 
-export const allPokemonSetState = (newState: PokemonItemInterface[]): AllPokemonSetPokemons => {
+export const allPokemonSetStateAction = (newState: PokemonItemInterface[]): AllPokemonSetPokemon => {
     return {
-        type: ActionTypeNames.ALLPOKEMON_SET_POKEMONS,
-        pokemons: [...newState]
+        type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
+        pokemon: [...newState]
     }
 }
 
 export const allPokemonFetchListAction= (): AppThunk => async (dispatch) => {
     const data = await getPokemonsListRepo();
     dispatch({
-        type: ActionTypeNames.ALLPOKEMON_SET_POKEMONS,
-        pokemons: [...data]
+        type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
+        pokemon: [...data]
     });
 };

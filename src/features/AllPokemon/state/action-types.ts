@@ -1,15 +1,15 @@
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
 
 export enum ActionTypeNames {
-  ALLPOKEMON_SET_POKEMONS = "ALLPOKEMON_SET_POKEMONS",
+  ALLPOKEMON_SET_POKEMON = "ALLPOKEMON_SET_POKEMON",
   ALLPOKEMON_SET_PAGENUMBER = "ALLPOKEMON_SET_PAGENUMBER",
   ALLPOKEMON_PAGENUMBER_INC = "ALLPOKEMON_PAGENUMBER_INC",
   ALLPOKEMON_PAGENUMBER_DEC = "ALLPOKEMON_PAGENUMBER_DEC",
 }
 
-export type AllPokemonSetPokemons = {
-  type: ActionTypeNames.ALLPOKEMON_SET_POKEMONS;
-  pokemons: PokemonItemInterface[];
+export type AllPokemonSetPokemon = {
+  type: ActionTypeNames.ALLPOKEMON_SET_POKEMON;
+  pokemon: PokemonItemInterface[];
 };
 
 export type AllPokemonSetPageNumber = {
@@ -25,7 +25,7 @@ export type AllPokemonPageNumberDec = {
 };
 
 export type AllPokemonActionTypes =
-  | AllPokemonSetPokemons
+  | AllPokemonSetPokemon
   | AllPokemonSetPageNumber
   | AllPokemonPageNumberInc
   | AllPokemonPageNumberDec;

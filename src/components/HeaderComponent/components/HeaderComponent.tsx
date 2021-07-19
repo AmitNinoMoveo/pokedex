@@ -3,7 +3,7 @@ import '../../../styles/app/Header.css';
 
 const HeaderComponent = () => {
     return (
-        <div className="container" >
+        <div className="container-app-header" >
             <img src="utils/images/pokemon-logo-img.svg" alt="pokemon-logo-img" />
         </div>
     )

@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,yBAAyB,CAAA;ECOrB,gBAAgB,ECLP,OAAO;EDMhB,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,GAAG;EACZ,cAAc,EAAE,IAAI;EACpB,WAAW,EAAG,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,mBAAmB;EAX7C,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;CDClB",
+    "sources": [
+        "singlePokemon.scss",
+        "../../../styles/global/Mixins.scss",
+        "../../../styles/global/Variables.scss",
+        "../../../styles/global/Variables.scss"
+    ],
+    "names": [],
+    "file": "singlePokemon.css"
+}

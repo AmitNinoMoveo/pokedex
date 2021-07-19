@@ -1,0 +1,8 @@
+@import '../../../styles/global/Mixins.scss';
+@import '../../../styles/global/Variables.scss';
+
+.single-pokemon-container{
+    @include cardTemplate();
+    @include flexCenter();
+    
+};

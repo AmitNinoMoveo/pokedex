@@ -4,6 +4,7 @@ import "./styles/app/App.css";
 import HeaderComponent from "./components/HeaderComponent/components/HeaderComponent";
 import SearchComponent from "./components/SearchComponent/components/SearchComponent";
 import AllPokemonComponent from "./features/AllPokemon/components/PokemonList";
+import SinglePokemonComponent from "./features/SinglePokemon/components/SinglePokemon";
 
 function App() {
   return (
@@ -12,14 +13,14 @@ function App() {
       <SearchComponent />
       <BrowserRouter>
         <Switch>
-          <Route path="/">
+          <Route path="/pokemon/:id">
+            <SinglePokemonComponent />
+          </Route>
+          <Route path="/all">
             <AllPokemonComponent />
           </Route>
-          {/* <Route path="/single/:id">
-            <SinglePokemonComponent />
-          </Route> */}
           <Route>
-            <Redirect from="*" to="/" />
+            <Redirect from="/*" to="/all" />
           </Route>
         </Switch>
       </BrowserRouter>

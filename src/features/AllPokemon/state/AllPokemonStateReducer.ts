@@ -16,10 +16,10 @@ const allPokemonReducer = (
   action: AllPokemonActionTypes
 ): allPokemonReducerType => {
   switch (action.type) {
-    case ActionTypeNames.ALLPOKEMON_SET_POKEMONS:
+    case ActionTypeNames.ALLPOKEMON_SET_POKEMON:
         return {
         ...state,
-        pokemonList: action.pokemons,
+        pokemonList: action.pokemon,
       };
     case ActionTypeNames.ALLPOKEMON_SET_PAGENUMBER:
         return {
