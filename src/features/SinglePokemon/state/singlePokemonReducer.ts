@@ -5,6 +5,7 @@ const initialState: singlePokemon = {
     id: 0,
     name: '',
     description: '',
+    imageUrl: '',
     types: [''],
     stats: [{name: '', value: 0}],
 }

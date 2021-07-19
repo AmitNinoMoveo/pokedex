@@ -24,7 +24,7 @@ const SinglePokemonComponent = () => {
     <div className="single-pokemon-container">
       <p id="id">{generatePokemonIdString(pokemon.id)}</p>
       <div className="image-title-container">
-        <div className="pokemon-image" />
+        <div className="pokemon-image" style={{backgroundImage:`url(${pokemon.imageUrl})`}}/>
         <p className="title">{toTitleCaseSingle(pokemon.name)}</p>
         <div className="pokemon-types-container">
           {pokemon.types.map((type: string) => (

@@ -5,20 +5,19 @@
     @include cardTemplate();
     @include flexCenter();
 
-    max-width: 750px;
+    max-width: 700px;
     width: 90%;
-    height: 230px;
     position: relative;
     padding: 30px 50px;
     justify-content: space-between;
     flex-wrap: wrap;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
 
-    p{
+    p {
         text-align: left;
         font-size: 17px;
     }
-    p#id{
+    p#id {
         position: absolute;
         top: 15px;
         left: 20px;
@@ -37,25 +36,55 @@
     }
     .image-title-container {
         width: 25%;
+        @include flexCenter();
+
+        p {
+            text-align: center;
+        }
+        p.title {
+            font-size: 22px;
+        }
+        .pokemon-image{
+            width: 100%;
+            height: 150px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+        .pokemon-types-container{
+            @include flexCenter();
+            justify-content: center;
+            flex-wrap: wrap;
+
+            width: 100%;
+            
+            p.pokemon-type {
+                padding: 2px 11px;
+                margin: 5px;
+                border-radius: 5px;
+                color: white;
+                font-size: 16px;
+            }
+        }
     }
     .description-stats-container {
         @include flexCenter();
         flex-direction: column;
         width: 65%;
-        .description{
-            margin-bottom: 40px ;
+        .description {
+            margin-bottom: 40px;
         }
-        .stats-container{
+        .stats-container {
             @include flexCenter();
             flex-direction: column;
             align-items: flex-start;
             flex-wrap: wrap;
             height: 70px;
             width: 100%;
-            p{
+            p {
                 text-align: left;
                 margin-bottom: 2px;
             }
-        };
+        }
     }
 }

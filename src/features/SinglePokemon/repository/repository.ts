@@ -33,8 +33,12 @@ export const getPokemonRepo = async (
   const flavorTextResponse: rawFlavorTextResponse = response2.data;
   const stats: singleStat[] = statsTypesResponse.stats.map(
     (rawStat: rawStat) => {
+      let name = rawStat.stat.name;
+      if (name.includes('-')) {
+        name = name.replace('-', ' ') ;
+      }
       const stat: singleStat = {
-        name: rawStat.stat.name,
+        name,
         value: +rawStat.base_stat,
       };
       return stat;
@@ -48,6 +52,7 @@ export const getPokemonRepo = async (
     id: pokemonId,
     name: statsTypesResponse.name,
     description: flavorTextResponse.flavor_text_entries[0].flavor_text,
+    imageUrl: statsTypesResponse.sprites.front_default,
     types,
     stats,
   };

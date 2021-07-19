@@ -7,6 +7,7 @@ export interface singlePokemon {
     id: number;
     name: string;
     description: string;
+    imageUrl: string;
     types: string[];
     stats: singleStat[];
 };
