@@ -1,3 +1,4 @@
+import { fetchPokemonBySearch } from "../../../components/SearchComponent/repository/repository";
 import { AppThunk } from "../../../state/store";
 import { getPokemonsListRepo } from "../repository/repository";
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
@@ -16,4 +17,13 @@ export const allPokemonFetchListAction= (): AppThunk => async (dispatch) => {
         type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
         pokemon: [...data]
     });
+};
+
+export const allPokemonSearchAction = (): AppThunk => async (dispatch) => {
+    const data = await fetchPokemonBySearch();
+    dispatch({
+        type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
+        pokemon: [...data]
+    });
+    
 };

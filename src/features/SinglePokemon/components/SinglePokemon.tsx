@@ -27,8 +27,8 @@ const SinglePokemonComponent = () => {
         <div className="pokemon-image" style={{backgroundImage:`url(${pokemon.imageUrl})`}}/>
         <p className="title">{toTitleCaseSingle(pokemon.name)}</p>
         <div className="pokemon-types-container">
-          {pokemon.types.map((type: string) => (
-            <p className='pokemon-type' style={{backgroundColor:`${getPokemonTypeColor(type)}`}}>{toTitleCaseSingle(type)}</p>
+          {pokemon.types.map((type: string, i) => (
+            <p key={i} className='pokemon-type' style={{backgroundColor:`${getPokemonTypeColor(type)}`}}>{toTitleCaseSingle(type)}</p>
           ))}
         </div>
       </div>
@@ -38,8 +38,8 @@ const SinglePokemonComponent = () => {
         <p className="description" >{pokemon.description}</p>
         <p className="title">Stats</p>
         <div className="stats-container">
-          {pokemon.stats.map((stat) => (
-            <p>{`${toTitleCase(stat.name)}: ${stat.value}`}</p>
+          {pokemon.stats.map((stat, i) => (
+            <p key={i}>{`${toTitleCase(stat.name)}: ${stat.value}`}</p>
           ))}
         </div>
       </div>

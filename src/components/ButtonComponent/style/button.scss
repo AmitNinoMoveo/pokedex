@@ -1,0 +1,11 @@
+@import '../../../styles/global/Variables.scss';
+
+.app-button{
+    margin: 0 8px;
+    font-size: 20px;
+    color: $background;
+    background-color: $primary2;
+    padding: 3px 12px;
+    border-radius: 6px;
+    border: none;
+}

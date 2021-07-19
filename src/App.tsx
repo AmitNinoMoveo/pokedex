@@ -7,6 +7,7 @@ import AllPokemonComponent from "./features/AllPokemon/components/PokemonList";
 import SinglePokemonComponent from "./features/SinglePokemon/components/SinglePokemon";
 
 function App() {
+  
   return (
     <div className="App">
       <HeaderComponent />
