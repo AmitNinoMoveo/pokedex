@@ -1,6 +1,13 @@
 @import "../../../styles/global/Mixins.scss";
 @import "../../../styles/global/Variables.scss";
 
+#hoverable-container:hover{
+    box-shadow: (inset 2px 2px 4px rgba(0, 0, 0, 0.15));
+}
+#hoverable-container:active{
+    box-shadow: (inset 2px 2px 4px rgba(0, 0, 0, 0.699));
+}
+
 .container-pokemon-item {
     @include flexCenter();
     @include cardTemplate();
@@ -12,7 +19,8 @@
     padding-bottom: 18px;
     margin-bottom: 60px;
     margin-right: 20px;
-    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: (2px 2px 4px rgba(0, 0, 0, 0.15));
+    
 
     p{
         color: $primary1;
