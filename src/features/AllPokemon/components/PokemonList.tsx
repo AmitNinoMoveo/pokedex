@@ -13,7 +13,9 @@ const AllPokemonComponent = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(allPokemonFetchListAction());
+    if(pokemonList && !pokemonList.length){
+      dispatch(allPokemonFetchListAction());
+    }
     // eslint-disable-next-line
   }, []);
 
