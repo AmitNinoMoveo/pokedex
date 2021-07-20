@@ -7,17 +7,16 @@ import AllPokemonComponent from "./features/AllPokemon/components/PokemonList";
 import SinglePokemonComponent from "./features/SinglePokemon/components/SinglePokemon";
 
 function App() {
-  
   return (
     <div className="App">
       <HeaderComponent />
-      <SearchComponent />
       <BrowserRouter>
         <Switch>
           <Route path="/pokemon/:id">
             <SinglePokemonComponent />
           </Route>
           <Route path="/all">
+            <SearchComponent />
             <AllPokemonComponent />
           </Route>
           <Route>

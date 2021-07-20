@@ -25,5 +25,4 @@ export const allPokemonSearchAction = (): AppThunk => async (dispatch) => {
         type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
         pokemon: [...data]
     });
-    
 };
