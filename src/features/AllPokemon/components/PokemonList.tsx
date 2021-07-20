@@ -5,6 +5,7 @@ import { RootState } from "../../../state/store";
 import { allPokemonFetchListAction } from "../state/actions";
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
 import PokemonItemComponent from "./PokemonItem";
+import { SinglePokemonResetState } from "../../SinglePokemon/state/actions";
 
 const AllPokemonComponent = () => {
   const pokemonList = useSelector(
@@ -15,7 +16,8 @@ const AllPokemonComponent = () => {
   useEffect(() => {
     if(pokemonList && !pokemonList.length){
       dispatch(allPokemonFetchListAction());
-    }
+    };
+    dispatch(SinglePokemonResetState());
     // eslint-disable-next-line
   }, []);
 
