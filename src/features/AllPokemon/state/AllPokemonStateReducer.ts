@@ -21,6 +21,11 @@ const allPokemonReducer = (
         ...state,
         pokemonList: action.pokemon,
       };
+    case ActionTypeNames.ALLPOKEMON_RESET_STATE:
+      return {
+        ...state,
+        pokemonList: {...initialState.pokemonList}
+      }
     case ActionTypeNames.ALLPOKEMON_SET_PAGENUMBER:
         return {
             ...state,

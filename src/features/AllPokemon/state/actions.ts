@@ -2,17 +2,18 @@ import { fetchPokemonBySearch } from "../../../components/SearchComponent/reposi
 import { searchReset } from "../../../components/SearchComponent/state/actions";
 import { AppThunk } from "../../../state/store";
 import { getPokemonsListRepo } from "../repository/repository";
-import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
-import { ActionTypeNames, AllPokemonSetPokemon } from "./action-types";
+import { ActionTypeNames, AllPokemonActionTypes } from "./action-types";
 
-export const allPokemonSetStateAction = (newState: PokemonItemInterface[]): AllPokemonSetPokemon => {
+export const allPokemonResetStateAction = (): AllPokemonActionTypes => {
     return {
-        type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
-        pokemon: [...newState]
+        type: ActionTypeNames.ALLPOKEMON_RESET_STATE
     }
 }
 
 export const allPokemonFetchListAction= (): AppThunk => async (dispatch) => {
+    dispatch({
+        type: ActionTypeNames.ALLPOKEMON_RESET_STATE
+    })
     const data = await getPokemonsListRepo();
     dispatch({
         type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
@@ -21,6 +22,9 @@ export const allPokemonFetchListAction= (): AppThunk => async (dispatch) => {
 };
 
 export const allPokemonSearchAction = (): AppThunk => async (dispatch) => {
+    dispatch({
+        type: ActionTypeNames.ALLPOKEMON_RESET_STATE
+    })
     const data = await fetchPokemonBySearch();
     dispatch({
         type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,

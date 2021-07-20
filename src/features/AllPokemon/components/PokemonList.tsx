@@ -7,6 +7,7 @@ import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
 import PokemonItemComponent from "./PokemonItem";
 import { SinglePokemonResetState } from "../../SinglePokemon/state/actions";
 import PagesComponent from "./Pages";
+import LoadingComponent from "../../../components/LoadingComponent/components/Loading";
 
 const AllPokemonComponent = () => {
   const pokemonList = useSelector(
@@ -29,7 +30,7 @@ const AllPokemonComponent = () => {
           return <PokemonItemComponent key={pokemon.id} pokemon={pokemon} />;
         })
       ) : (
-        <p>No Pokemon!</p>
+        <LoadingComponent />
       )}
     </div>
   );
