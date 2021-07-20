@@ -26,6 +26,11 @@ export const allPokemonSearchAction = (): AppThunk => async (dispatch) => {
         type: ActionTypeNames.ALLPOKEMON_RESET_STATE
     })
     const data = await fetchPokemonBySearch();
+    if (!data.length) {
+        dispatch(allPokemonFetchListAction());
+        dispatch(searchReset());
+        return
+    }
     dispatch({
         type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
         pokemon: [...data]
