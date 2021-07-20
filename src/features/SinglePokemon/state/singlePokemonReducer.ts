@@ -14,6 +14,8 @@ const singlePokemonReducer = (state = initialState, action: SinglePokemonActionT
     switch(action.type){
         case (SinglePokemonActionTypeNames.SINGLEPOKEMON_SETSTATE):
             return {...action.pokemon}
+        case (SinglePokemonActionTypeNames.SINGLEPOKEMON_RESETINIT):
+            return {...initialState}
         default:
             return state
     };
