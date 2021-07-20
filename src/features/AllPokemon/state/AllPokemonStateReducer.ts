@@ -41,7 +41,7 @@ const allPokemonReducer = (
         };
       };
     case ActionTypeNames.ALLPOKEMON_PAGENUMBER_DEC:
-      if (state.pageNumber === 1) {
+      if (state.pageNumber === 0) {
         return state;
       } else {
         return{
