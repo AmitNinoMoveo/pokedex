@@ -1,0 +1,6 @@
+@import '../../../styles/global/Mixins.scss';
+
+.pages-container{
+    @include flexCenter();
+    margin-bottom: 35px;
+}

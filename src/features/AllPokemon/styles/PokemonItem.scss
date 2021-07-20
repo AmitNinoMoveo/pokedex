@@ -3,6 +3,7 @@
 
 #hoverable-container:hover{
     box-shadow: (inset 2px 2px 4px rgba(0, 0, 0, 0.15));
+    cursor: pointer;
 }
 #hoverable-container:active{
     box-shadow: (inset 2px 2px 4px rgba(0, 0, 0, 0.699));

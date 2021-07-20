@@ -8,7 +8,7 @@ export type allPokemonReducerType = {
 
 const initialState: allPokemonReducerType = {
   pokemonList: [],
-  pageNumber: 5,
+  pageNumber: 1,
 };
 
 const allPokemonReducer = (

@@ -1,5 +1,8 @@
 @import '../../../styles/global/Variables.scss';
 
+button:hover{
+    cursor: pointer;
+}
 .app-button{
     margin: 0 8px;
     font-size: 20px;
@@ -8,4 +11,4 @@
     padding: 3px 12px;
     border-radius: 6px;
     border: none;
-}
+};

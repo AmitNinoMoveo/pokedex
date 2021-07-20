@@ -6,6 +6,7 @@ import { allPokemonFetchListAction } from "../state/actions";
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
 import PokemonItemComponent from "./PokemonItem";
 import { SinglePokemonResetState } from "../../SinglePokemon/state/actions";
+import PagesComponent from "./Pages";
 
 const AllPokemonComponent = () => {
   const pokemonList = useSelector(
@@ -22,7 +23,7 @@ const AllPokemonComponent = () => {
   }, []);
 
   const PokemonList = () => (
-    <>
+    <div className="pokemon-list-container">
       {pokemonList.length ? (
         pokemonList.map((pokemon: PokemonItemInterface) => {
           return <PokemonItemComponent key={pokemon.id} pokemon={pokemon} />;
@@ -30,11 +31,12 @@ const AllPokemonComponent = () => {
       ) : (
         <p>No Pokemon!</p>
       )}
-    </>
+    </div>
   );
 
   return (
-    <div className="container" >
+    <div className="allpokemon-container" >
+      <PagesComponent />
       <PokemonList />
     </div>
   );

@@ -26,3 +26,16 @@ export const allPokemonSearchAction = (): AppThunk => async (dispatch) => {
         pokemon: [...data]
     });
 };
+
+export const allPokemonPageInc = (): AppThunk => async (dispatch) =>  {
+    dispatch({
+        type: ActionTypeNames.ALLPOKEMON_PAGENUMBER_INC
+    });
+    dispatch(allPokemonFetchListAction());
+};
+export const allPokemonPageDec = (): AppThunk => async (dispatch) =>  {
+    dispatch({
+        type: ActionTypeNames.ALLPOKEMON_PAGENUMBER_DEC
+    });
+    dispatch(allPokemonFetchListAction());
+};

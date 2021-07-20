@@ -3,7 +3,8 @@ import "../style/button.css";
 
 type Props = {
   func: () => void;
-  txt: string;
+  txt?: string;
+  icon?: any;
   extraStyleClassNames?: string;
 };
 
@@ -15,7 +16,7 @@ const ButtonComponent = (props: Props) => {
       }`}
       onClick={() => props.func()}
     >
-      {props.txt}
+      {props.txt ? props.txt : props.icon}
     </button>
   );
 };

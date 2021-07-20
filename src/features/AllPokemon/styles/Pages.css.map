@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,gBAAgB,CAAA;ECCZ,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EDFf,aAAa,EAAE,IAAI;CACtB",
+    "sources": [
+        "Pages.scss",
+        "../../../styles/global/Mixins.scss",
+        "../../../styles/global/Variables.scss"
+    ],
+    "names": [],
+    "file": "Pages.css"
+}
