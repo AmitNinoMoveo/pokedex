@@ -10,7 +10,7 @@ export function generatePokemonFetchUrl(): string {
   let outputUrl: string;
   let fetchPokemonOffset: number;
 
-  if (pageNumber <= 1) {
+  if (pageNumber <= 0) {
     outputUrl = `${baseUrl}limit=${fetchPokemonAmountLimit}`;
   } else {
     fetchPokemonOffset = pageNumber * fetchPokemonAmountLimit;

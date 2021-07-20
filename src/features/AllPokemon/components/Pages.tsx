@@ -18,7 +18,7 @@ const PagesComponent = () => {
         }}
         txt={"<"}
         />
-        <p id="page-indicator">{pageNumber}</p>
+        <p id="page-indicator">{pageNumber+1}</p>
       <ButtonComponent
         key={"inc"}
         func={() => {
