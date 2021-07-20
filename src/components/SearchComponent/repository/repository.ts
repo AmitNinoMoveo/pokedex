@@ -18,7 +18,8 @@ export const fetchPokemonBySearch = async (): Promise<
     })
     .filter(
       (item: PokemonItemInterface) =>
-        item.name.includes(query) || item.id.toString().includes(query)
+        item.name.toLowerCase().includes(query) ||
+        item.id.toString().includes(query.toLowerCase())
     )
     .slice(0, 20);
   return filteredPokemonsList;
