@@ -5,7 +5,6 @@ import HeaderComponent from "./components/HeaderComponent/components/HeaderCompo
 import SearchComponent from "./components/SearchComponent/components/SearchComponent";
 import AllPokemonComponent from "./features/AllPokemon/components/PokemonList";
 import SinglePokemonComponent from "./features/SinglePokemon/components/SinglePokemon";
-import LoadingComponent from "./components/LoadingComponent/components/Loading";
 
 function App() {
   return (
