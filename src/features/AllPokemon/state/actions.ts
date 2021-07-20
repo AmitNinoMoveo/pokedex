@@ -1,4 +1,5 @@
 import { fetchPokemonBySearch } from "../../../components/SearchComponent/repository/repository";
+import { searchReset } from "../../../components/SearchComponent/state/actions";
 import { AppThunk } from "../../../state/store";
 import { getPokemonsListRepo } from "../repository/repository";
 import { PokemonItemInterface } from "../utils/AllPokemonFeatureInterfaces";
@@ -25,6 +26,7 @@ export const allPokemonSearchAction = (): AppThunk => async (dispatch) => {
         type: ActionTypeNames.ALLPOKEMON_SET_POKEMON,
         pokemon: [...data]
     });
+    dispatch(searchReset());
 };
 
 export const allPokemonPageInc = (): AppThunk => async (dispatch) =>  {

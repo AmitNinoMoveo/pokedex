@@ -6,3 +6,8 @@ export const searchSetOnChangeAction = (str: string): SearchActionType => {
     newState: str,
   };
 };
+export const searchReset = (): SearchActionType => {
+  return {
+    type: SearchActionTypeNames.SEARCH_RESET
+  };
+};
