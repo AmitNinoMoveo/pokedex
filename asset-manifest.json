@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/pokedex/static/css/main.25dec179.chunk.css",
-    "main.js": "/pokedex/static/js/main.44828a83.chunk.js",
-    "main.js.map": "/pokedex/static/js/main.44828a83.chunk.js.map",
+    "main.js": "/pokedex/static/js/main.912842b6.chunk.js",
+    "main.js.map": "/pokedex/static/js/main.912842b6.chunk.js.map",
     "runtime-main.js": "/pokedex/static/js/runtime-main.6821e65c.js",
     "runtime-main.js.map": "/pokedex/static/js/runtime-main.6821e65c.js.map",
     "static/js/2.6c8f9335.chunk.js": "/pokedex/static/js/2.6c8f9335.chunk.js",
     "static/js/2.6c8f9335.chunk.js.map": "/pokedex/static/js/2.6c8f9335.chunk.js.map",
     "index.html": "/pokedex/index.html",
     "static/css/main.25dec179.chunk.css.map": "/pokedex/static/css/main.25dec179.chunk.css.map",
-    "static/js/2.6c8f9335.chunk.js.LICENSE.txt": "/pokedex/static/js/2.6c8f9335.chunk.js.LICENSE.txt"
+    "static/js/2.6c8f9335.chunk.js.LICENSE.txt": "/pokedex/static/js/2.6c8f9335.chunk.js.LICENSE.txt",
+    "static/media/pikatchu-animation.ee1b7ad2.gif": "/pokedex/static/media/pikatchu-animation.ee1b7ad2.gif",
+    "static/media/pokemon-logo-img.7638f410.svg": "/pokedex/static/media/pokemon-logo-img.7638f410.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6821e65c.js",
     "static/js/2.6c8f9335.chunk.js",
     "static/css/main.25dec179.chunk.css",
-    "static/js/main.44828a83.chunk.js"
+    "static/js/main.912842b6.chunk.js"
   ]
 }
