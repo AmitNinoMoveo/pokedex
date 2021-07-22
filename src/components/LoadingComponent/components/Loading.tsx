@@ -1,10 +1,11 @@
 import React from 'react';
 import '../styles/Loading.css';
+import PikatchuAnimation from '../../../utils/images/pikatchu-animation.gif';
 
 const LoadingComponent = () => {
     return (
         <div className='loading-container'>
-            <img src="utils/images/pikatchu-animation.gif" alt="pokemon-loading" />
+            <img src={PikatchuAnimation} alt="pokemon-loading" />
         </div>
     );
 };
