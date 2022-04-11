@@ -15,7 +15,7 @@ import LoadingComponent from "../../../components/LoadingComponent/components/Lo
 type Params = {
   id: string;
 };
-
+// hi
 const SinglePokemonComponent = () => {
   const { id } = useParams<Params>();
   const dispatch = useDispatch();
